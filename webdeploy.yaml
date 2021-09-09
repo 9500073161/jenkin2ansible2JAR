@@ -1,0 +1,11 @@
+---
+ - name: Deploy webserver
+   hosts: localhost
+   become: yes
+   tasks:
+      - name: Installing Package required
+        apt: name=apache2 state=present
+      - name: Service for webserver need to start
+        service: name=apache2 state=started
+      - name: Having Webpage contents
+        copy: content="This is Simplilearn" dest=/var/www/html/index.html
