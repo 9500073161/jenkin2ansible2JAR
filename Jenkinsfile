@@ -33,7 +33,7 @@ pipeline {
        }         
       stage('Ansible Deploy') {    
             steps {                          
-                 sh "ansible-playbook webdeploy.yml -i localhost --user admin --key-file ~/.ssh/id_rsa"        
+                 sh "ansible-playbook webapp.yaml -i localhost --user admin --key-file ~/.ssh/id_rsa"        
                   }
         }
     }
