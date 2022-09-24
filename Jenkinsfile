@@ -8,7 +8,7 @@ pipeline {
     stages {
       stage('checkout') {
            steps {
-                git branch: 'main', url: 'https://github.com/Yash-9/Congifxyz.git' 
+                git branch: 'main', url: 'https://github.com/9500073161/jenkin2ansible2JAR.git' 
           }
         }
       stage('Code Compile'){
@@ -33,7 +33,7 @@ pipeline {
        }         
       stage('Ansible Deploy') {    
             steps {                          
-                 sh "ansible-playbook webdeploy.yml -i localhost --user jenkins --key-file ~/.ssh/id_rsa"        
+                 sh "ansible-playbook webdeploy.yml -i localhost --user admin --key-file ~/.ssh/id_rsa"        
                   }
         }
     }
